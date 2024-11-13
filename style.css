@@ -109,7 +109,10 @@ a {
 
 
 .link_nav:hover {
-  color: #333;
+  color: #FFDD33;
+background-color: #333;
+border-radius: 5px;
+font-size: 15px;
 }
 
 /* Dropdown Styling */
@@ -159,7 +162,8 @@ a {
 }
 
 .dropdown-list a:hover {
-  background-color: #FFDD33; /* Couleur de fond plus sombre au survol */
+  background-color: #333;
+  color:#FFDD33; /* Couleur de fond plus sombre au survol */
 }
 
 /* Adjust spacing between nav items */
