@@ -1,0 +1,429 @@
+.navbar {
+    background-color: #FFDD33; /* Yellow background */
+    padding: 1em 0;
+    font-family: Arial, sans-serif;
+    color: #333333; /* Text color */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  /* Brand Logo - Aligned to Left */
+  .wrapper_nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .brand {
+    margin-right: auto; /* Aligns the logo to the left */
+  }
+  
+  .img_brand {
+    max-height: 50px;
+  }
+  
+  /* Navigation Menu - Aligned to Right */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  
+  
+  .link_nav:hover {
+    color: #FFDD33;
+  background-color: #333;
+  border-radius: 5px;
+  font-size: 15px;
+  }
+  .link_nav .design{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .dropdown-toggle .design{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .dropdown-toggle .design:hover{
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: #333;
+    color: #FFDD33;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  
+  .collection_item-services .link_nav{
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  /* Dropdown Styling */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: #333333;
+  }
+  
+  .dropdown-toggle .w-icon-dropdown-toggle {
+    margin-left: 5px;
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    background-color: #FFDD33; /* Couleur de fond assortie à la barre de navigation */
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    display: none;
+    flex-direction: column;
+    padding: 5px 0; /* Ajoute un espace intérieur autour de la liste déroulante */
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-list {
+    display: flex; /* Change à flex pour s'assurer que les éléments s'affichent bien en colonne */
+    flex-direction: column;
+  }
+  
+  /* Liens dans la liste déroulante */
+  .dropdown-list a {
+    color: #333333; /* Couleur du texte */
+    padding: 12px 20px; /* Augmente l’espace pour chaque lien */
+    margin: 2px 0; /* Ajoute un espace entre les éléments */
+    text-decoration: none;
+    transition: background 0.3s ease;
+    border-radius: 4px;
+    display: block; /* Assure que chaque lien occupe toute la largeur */
+  }
+  
+  .dropdown-list a:hover {
+    background-color: #333;
+    color:#FFDD33; /* Couleur de fond plus sombre au survol */
+  }
+  
+  /* Adjust spacing between nav items */
+  .link_nav {
+    color: #333333; /* Dark text color */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 500;
+    margin-right: 10px; /* Adds space between items */
+    transition: color 0.3s ease;
+  }
+  
+  
+  /* Login Button */
+  .link_button {
+    display: flex;
+    align-items: center;
+    color:  white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .link_button:hover {
+    background-color: #FFDD33;
+    color: #333;
+  }
+  
+  /* Responsive Menu Button */
+  .menu-button {
+    display: none;
+  }
+  
+  .wrapper_lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .line_top, .line_middle, .line_bottom {
+    width: 25px;
+    height: 3px;
+    background-color: #333333;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+    .menu-button {
+      display: flex;
+      cursor: pointer;
+    }
+  }
+  
+  .form_conn {
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    padding: 40px 100px;  /* Espacement intérieur ajusté */
+    max-width: 90%;       /* Utilisation de pourcentages pour rendre la largeur réactive */
+    height: 80vh;         /* Utilisation de la hauteur en vh pour l'adaptabilité */
+    background-color: #333;
+    border-radius: 10px;
+    box-sizing: border-box; /* Inclure le padding dans la largeur/hauteur */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #connectervous {
+    position: relative;
+    top: 20%; /* Ajuster la position relative à la hauteur */
+    left: -1%; /* Position par rapport à la largeur */
+    width: 200px;
+    height: 50px;
+    background-color: #000000;
+    border-radius: 15px;
+    color: #FFDD33;
+    text-align: center;
+    line-height: 50px; /* Centrer le texte verticalement */
+  }
+  
+  #textconn {
+    position: relative;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFDD33;
+    font-size: 1.375rem;  /* Utilisation de rem pour la réactivité */
+    font-family: 'Inter', sans-serif;
+    font-weight: 540;
+  }
+  
+  .form-vertical {
+    position: relative;
+    top: 90px;
+    left: -25%;
+    margin: 0 auto;
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 8px;
+    border: 3px solid #FFDD33;
+    border-radius: 15px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #FFDD33;
+    color: #333;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.125rem; /* Utilisation de rem */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  button:hover {
+    background-color: #000000;
+    color: #FFDD33;
+  }
+  
+  #img_conn {
+    position: relative;
+    left: 55%; /* Déplacer selon la largeur */
+    top: -50%;
+    width: 45%; /* Utilisation de pourcentage pour la largeur */
+    height: auto;
+    max-height: 80vh;
+    border-radius: 10%;
+  }
+  
+  @media (max-width: 768px) {
+    #img_conn {
+      display: none;
+    }
+  }
+  
+  #logowaw {
+    position: absolute;
+    left: 27%;
+    top: 15%;
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+  }
+  
+  #inscritext {
+    position: absolute;
+    font-size: 1.125rem; /* Utilisation de rem */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #FFDD33;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  }
+  
+  #inscritext {
+    top: 75%;
+    left:15%
+  }
+  
+  #conntext {
+    position: absolute;
+    font-size: 1.125rem; /* Utilisation de rem */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #FFDD33;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  }
+  
+  #conntext {
+    top: 87%;
+    left:12%
+  }
+  
+  
+  @media (max-width: 768px) {
+    .form_conn {
+      padding: 20px 30px;
+      max-width: 95%;
+      height: auto;
+    }
+  
+    #connectervous {
+      width: 150px;
+      left: 10%;
+    }
+  
+    .form-vertical {
+      width: 90%;
+      top: 50px;
+      left: 5%;
+    }
+  
+    #img_conn {
+      width: 80%;
+      left: 50%;
+      top: -40%;
+    }
+  
+    #logowaw {
+      width: 40px;
+      height: 40px;
+      left: 35%;
+      top: 10%;
+    }
+  
+    #inscritext {
+      font-size: 1rem;
+      top: 65%;
+    }
+  
+    #textconn {
+      font-size: 1.125rem;
+    }
+  }
+  
+  /* Tablette (768px - 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .form_conn {
+      padding: 30px 60px;
+      max-width: 80%;
+    }
+  
+    #connectervous {
+      width: 180px;
+      left: 12%;
+    }
+  
+    .form-vertical {
+      width: 80%;
+      left: 10%;
+    }
+  
+    #img_conn {
+      width: 50%;
+      left: 60%;
+      top: -30%;
+    }
+  
+    #logowaw {
+      width: 45px;
+      height: 45px;
+      left: 30%;
+      top: 12%;
+    }
+  
+    #inscritext {
+      font-size: 1.1rem;
+      top: 70%;
+    }
+  }
+  
+  /* Bureau (1024px et plus) */
+  @media (min-width: 1024px) {
+    .form_conn {
+      padding: 40px 100px;
+      max-width: 70%;
+    }
+  
+    #connectervous {
+      width: 200px;
+      left: 16%;
+    }
+  
+    .form-vertical {
+      width: 300px;
+      left: -25%;
+    }
+  
+    #img_conn {
+      width: 45%;
+      left: 55%;
+      top: -50%;
+    }
+  
+    #logowaw {
+      width: 50px;
+      height: 50px;
+      left: 27%;
+      top: 15%;
+    }
+  
+    #inscritext {
+      top: 75%;
+      left: 15%;
+      font-size: 1.125rem;
+    }
+  }
+  

@@ -2290,6 +2290,96 @@ right: -25px; /* Ajustez pour l'espacement souhaité */
 }
 
 
+/* General styling */
+.values-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.value-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.value-text {
+  max-width: 500px;
+}
+
+.value-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.value-text p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.icon {
+  color: #FFDD33;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.value-image img {
+  max-width: 60%;
+  border-radius: 10px;
+  margin-left: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .value-item {
+      flex-direction: column;
+  }
+  .value-item.reverse {
+      flex-direction: column;
+  }
+  .value-image img {
+      width: 100%;
+  }
+}
+
+.values-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+}
+
+.value-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.value-image {
+  flex: 1;
+}
+
+.value-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.icon {
+  color: #FFDD33;
+  font-size: 24px;
+  margin-right: 8px;
+}
 
 
 
