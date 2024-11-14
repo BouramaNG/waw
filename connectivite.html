@@ -915,5 +915,25 @@
         <!-- Start of HubSpot Embed Code -->
         <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143441332.js"></script>
         <!-- End of HubSpot Embed Code -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Obtenez seulement le nom de fichier de l'URL actuelle
+                const currentPath = window.location.pathname.split("/").pop();
+        
+                // Sélectionnez tous les liens du menu
+                const navLinks = document.querySelectorAll(".link_nav");
+        
+                // Boucle sur chaque lien
+                navLinks.forEach(link => {
+                    // Obtenez le nom de fichier de l'attribut href du lien
+                    const linkPath = link.getAttribute("href").split("/").pop();
+        
+                    // Si le nom de fichier correspond, appliquez la classe 'active'
+                    if (linkPath === currentPath) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

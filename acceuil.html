@@ -675,11 +675,9 @@
                                 <img src="https://wawtelecom.com/maintenance/waw.png" loading="lazy" alt="Connected Networks Logo" class="img_brand"/>
                             </a>
                             <nav role="navigation" class="nav-menu w-nav-menu">
-                                
                                 <a href="acceuil.html" class="link_nav w-inline-block">
-                                    <div class="design">Acceuil</div>
+                                    <div class="design">Accueil</div>
                                 </a>
-                                
                                 <div data-hover="false" data-delay="0" class="dropdown w-dropdown">
                                     <div class="dropdown-toggle w-dropdown-toggle">
                                         <div class="w-icon-dropdown-toggle"></div>
@@ -689,24 +687,20 @@
                                         <div class="collection_wrapper-services w-dyn-list">
                                             <div role="list" class="collection_list-services w-dyn-items">
                                                 <div role="listitem" class="collection_item-services w-dyn-item">
-                                                    <a href="connectivite.html" class="link_nav w-dropdown-link">Connectivite</a>
+                                                    <a href="connectivite.html" class="link_nav w-dropdown-link">Connectivité</a>
                                                 </div>
                                                 <div role="listitem" class="collection_item-services w-dyn-item">
                                                     <a href="cloud.html" class="link_nav w-dropdown-link">Cloud</a>
                                                 </div>
-                                               
                                                 <div role="listitem" class="collection_item-services w-dyn-item">
                                                     <a href="travel.html" class="link_nav w-dropdown-link">Travel</a>
                                                 </div>
-                                               
                                             </div>
                                         </div>
                                     </nav>
                                 </div>
-                               
-                              
                                 <a href="apropos.html" class="link_nav w-inline-block">
-                                    <div class="design">A propos</div>
+                                    <div class="design">À propos</div>
                                 </a>
                                 <a href="contacte.html" class="link_nav w-inline-block">
                                     <div class="design">Contact</div>
@@ -714,8 +708,8 @@
                                 <a href="connexion.html" class="link_nav w-inline-block">
                                     <div class="design">Connexion</div>
                                 </a>
-                               
                             </nav>
+                            
                             <div class="menu-button w-nav-button">
                                 <div class="wrapper_lines">
                                     <div class="line_top"></div>
@@ -944,5 +938,28 @@
         <!-- Start of HubSpot Embed Code -->
         <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143441332.js"></script>
         <!-- End of HubSpot Embed Code -->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Obtenez seulement le nom de fichier de l'URL actuelle
+                const currentPath = window.location.pathname.split("/").pop();
+        
+                // Sélectionnez tous les liens du menu
+                const navLinks = document.querySelectorAll(".link_nav");
+        
+                // Boucle sur chaque lien
+                navLinks.forEach(link => {
+                    // Obtenez le nom de fichier de l'attribut href du lien
+                    const linkPath = link.getAttribute("href").split("/").pop();
+        
+                    // Si le nom de fichier correspond, appliquez la classe 'active'
+                    if (linkPath === currentPath) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        </script>
+        
+        
     </body>
 </html>

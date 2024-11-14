@@ -1014,6 +1014,16 @@ gap: 8px;
 font-size: 16px;
 }
 
+/* Style pour le lien actif */
+.link_nav.active {
+  background-color: #333; /* Exemple de couleur de fond */
+  color: #FFDD33; /* Couleur du texte */
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+
+
 @media (max-width: 768px) {
 .wrapper_footer {
   flex-direction: column;

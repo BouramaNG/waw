@@ -344,5 +344,26 @@
 });
 
         </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Obtenez seulement le nom de fichier de l'URL actuelle
+        const currentPath = window.location.pathname.split("/").pop();
+
+        // Sélectionnez tous les liens du menu
+        const navLinks = document.querySelectorAll(".link_nav");
+
+        // Boucle sur chaque lien
+        navLinks.forEach(link => {
+            // Obtenez le nom de fichier de l'attribut href du lien
+            const linkPath = link.getAttribute("href").split("/").pop();
+
+            // Si le nom de fichier correspond, appliquez la classe 'active'
+            if (linkPath === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
     </body>
 </html>
