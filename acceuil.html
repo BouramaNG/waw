@@ -47,7 +47,619 @@
             }
             )(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
         </script>
+<style>
+    /* Conteneur principal pour la section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    color: #fff;
+    height: 60vh;
+    padding: 20px;
+}
 
+/* Arrière-plan et superposition */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Superposition noire */
+    z-index: 2;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Conteneur de contenu principal */
+.hero-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.content-wrapper {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+/* Texte de la section */
+.hero-eyebrow {
+    font-size: 30px;
+    color: #FFDD33;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 36px;
+    margin: 0 0 15px;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Boutons d'appel à l'action */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+/* Image responsive */
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.image-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .content-wrapper, .hero-image {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section principale */
+.offer-section {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Arrière-plan */
+.offer-background {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Conteneur de contenu */
+.container.offer-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Rangée */
+.offer-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Image de l'offre */
+.offer-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.image-responsive {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Texte de l'offre */
+.offer-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.offer-title {
+    font-size: 35px;
+    color: #333;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.offer-description {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.offer-legal {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Boutons d'appel à l'action */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    /* background-color: ; */
+}
+
+
+
+
+.btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #FFDD33;
+    color: #fff;
+}
+
+
+/* Style de base pour le bouton */
+.custom-btn {
+    background-color: #FFDD33; /* Couleur de fond */
+    color: #333; /* Couleur de texte */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+/* Style au survol du bouton */
+.custom-btn:hover {
+    background-color: #333; /* Couleur de fond au survol */
+    color: #FFDD33; /* Couleur de texte au survol */
+}
+
+/* Facultatif : effet de clic */
+.custom-btn:active {
+    background-color: #d4b523; /* Couleur de fond lors du clic */
+    color: #111;
+    font-size: 20px;
+    box-shadow: #FFDD33;
+    font-weight: bold;
+}
+
+
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #FFDD33;
+    border: 2px solid #FFDD33;
+}
+
+.btn-secondary:hover {
+    background-color: #FFDD33;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .offer-row {
+        flex-direction: column;
+    }
+    
+    .offer-image, .offer-text {
+        max-width: 100%;
+        padding: 10px 0;
+        gap: 40px;
+    }
+
+   
+
+    .offer-description {
+        font-size: 16px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Pour la section 2*/
+/* Section background and spacing */
+.max-width-background {
+    background-color: #f5f5f5;
+    padding: 2rem;
+}
+
+.theme-base-bg {
+    background-color: #fff;
+}
+
+.pad-t-lg, .pad-b-lg {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Responsive padding */
+@media (max-width: 768px) {
+    .pad-t-md, .pad-b-md {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .pad-t-none-sm, .pad-b-md-sm, .pad-l-lg-sm, .pad-r-lg-sm {
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Grid system */
+.grid-col-6 {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.grid-col-10 {
+    width: 83.3333%;
+}
+
+.grid-col-12-md {
+    width: 100%;
+}
+
+/* Alignment */
+.right-alignment .order-changed-onlyMobile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Text and content */
+.heading-xxl {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.type-base p, .type-legal-wysiwyg-editor p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.type-base p {
+    margin-top: 0.5rem;
+}
+
+.type-legal-wysiwyg-editor {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Button styles */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #FFDD33;
+    color: #333;
+}
+
+.btn-primary:hover {
+    background-color: #e6c82f;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+    margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: #b3b3b3;
+}
+
+/* Image content */
+.video-content-offer img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Border radius for responsive design */
+.radius-lg {
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Section contacte*/
+
+/* Section Contact */
+/* Section Contact */
+.contact-section {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #f7f7f7;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay for better text visibility */
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Background image with blur effect */
+.contact-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Services-Synapsys-04.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.contact-info h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #FFDD33;
+}
+
+.contact-info p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+   
+    display: flex;
+    align-items: center;
+    color: #FFDD33;
+}
+
+.contact-info .icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #FFDD33;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FFDD33;
+    box-shadow: 0 0 5px rgba(255, 221, 51, 0.4);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #FFDD33;
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+    color: #FFDD33;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+
+
+</style>
 
     </head>
     <body>
@@ -65,19 +677,19 @@
                             <nav role="navigation" class="nav-menu w-nav-menu">
                                 
                                 <a href="acceuil.html" class="link_nav w-inline-block">
-                                    <div>Acceuil</div>
+                                    <div class="design">Acceuil</div>
                                 </a>
                                 
                                 <div data-hover="false" data-delay="0" class="dropdown w-dropdown">
                                     <div class="dropdown-toggle w-dropdown-toggle">
                                         <div class="w-icon-dropdown-toggle"></div>
-                                        <div>Services</div>
+                                        <div class="design">Services</div>
                                     </div>
                                     <nav class="dropdown-list w-dropdown-list">
                                         <div class="collection_wrapper-services w-dyn-list">
                                             <div role="list" class="collection_list-services w-dyn-items">
                                                 <div role="listitem" class="collection_item-services w-dyn-item">
-                                                    <a href="connectivité.html" class="link_nav w-dropdown-link">Connectivite</a>
+                                                    <a href="connectivite.html" class="link_nav w-dropdown-link">Connectivite</a>
                                                 </div>
                                                 <div role="listitem" class="collection_item-services w-dyn-item">
                                                     <a href="cloud.html" class="link_nav w-dropdown-link">Cloud</a>
@@ -94,13 +706,13 @@
                                
                               
                                 <a href="apropos.html" class="link_nav w-inline-block">
-                                    <div>A propos</div>
+                                    <div class="design">A propos</div>
                                 </a>
                                 <a href="contacte.html" class="link_nav w-inline-block">
-                                    <div>Contact</div>
+                                    <div class="design">Contact</div>
                                 </a>
                                 <a href="connexion.html" class="link_nav w-inline-block">
-                                    <div>Connexion</div>
+                                    <div class="design">Connexion</div>
                                 </a>
                                
                             </nav>
@@ -115,42 +727,119 @@
                     </div>
                     
                 </div>
-                <section class="home-hero_section">
-                  <div class="container">
-                      <div class="page-padding">
-                          <div class="layout_columns">
-                              <!-- Colonne de texte à gauche -->
-                              <div class="column text-column">
-                                  <h1 class="text-size-h1">
-                                    À Propos de WawTelecom connectivité professionnelle.
-                                  </h1>
-                                  <p class="text-size-body">Text a mettre Ici !</p>
-                                 <div class="contact">
-                                  <a href="contacte.html" class="contacte">Nous Contactez</a>
-                                 </div>
-                              </div>
-                              
-                              <!-- Colonne d'image à droite -->
-                              <div class="column image-column">
-                                  <img class="img_box" src="https://wawtelecom.com/maintenance/apropos.jpeg" alt="Business Connectivity"/>
-                              </div>
-                          </div>
+
+
+
+                <section class="hero-section" style="margin-top: 20px;margin-bottom: 30px;">
+                    <div class="hero-background">
+                      <div class="background-overlay"></div>
+                      <div class="background-image" style="background-image: url('');"></div>
+                    </div>
+                    
+                    <div class="hero-content">
+                      <div class="content-wrapper">
+                        <div class="hero-text">
+                          <span class="hero-eyebrow">Tout fonctionne mieux </span>
+                          <h2 class="hero-title"> quand tout fonctionne ensemble</h2>
+                          <p class="hero-description">Partout dans le monde, nous accompagnons les entreprises dans leur transformation numérique en intégrant leurs technologies – Connectivité,  Cloud, IoT </p>
+                        </div>
+                  
+                        <div class="cta-buttons">
+                            <a href="contacte.html" class="custom-btn" >
+                                Contactez nous
+                            </a>
+                          
+                        </div>
                       </div>
-                  </div>
-              </section>
+                  
+                      <div class="hero-image">
+                        <img src="Services-Synapsys-04.jpg" alt="AT&T Business" class="image-responsive">
+                      </div>
+                    </div>
+                  </section>
+
+
+
+
+
+
+
+
+
+
+              
               
 
 
 
-           
+                  <section class="offer-section">
+                    <div class="offer-background">
+                        <div class="container offer-content">
+                            <div class="offer-row">
+                                
+                                <!-- Image / Vidéo -->
+                                <div class="offer-image">
+                                    <img src="apropos.jpeg" alt="AT&T Business Fiber®" class="image-responsive">
+                                </div>
+                                
+                                <!-- Texte et Boutons -->
+                                <div class="offer-text">
+                                    <h2 class="offer-title">
+                                        Bénéficiez d'une infrastructure numérique évolutive et sécurisée®</h2>
+                                    <p class="offer-description">
+                                        Chez Waw Telecom, nous nous engageons à fournir une connectivité qui renforce la sécurité et la performance des entreprises de nos clients. Nos solutions de connectivité privée assurent une infrastructure sécurisée et optimisée, prête à soutenir les besoins de l'ère numérique en toute confiance.*&nbsp;
+                                    </p>
+                                    
+                                  
+                
+                                    <div class="cta-buttons">
+                                        <a href="contacte.html" class="custom-btn">Contactez nous</a>
+
+                                        
+                                        
+                                        
+                              
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             
 
 
 
 
-
                 
-              
+                <section class="contact-section">
+                    <div class="contact-container">
+                        <!-- Informations de contact -->
+                        <div class="contact-info">
+                            <h2>Pour tout informations veuillez nous contactez</h2>
+                            <p><span class="icon">📍</span> Ngor Almadies, Immeuble BIB'S<br>60 Route de Ngor – Dakar, Sénégal</p>
+                            <p><span class="icon">📞</span>  <a href="tel:+221338601929" class="btn-secondary">Telephone +221 33 860 19 29</a></p>
+                            <p><span class="icon">✉️</span> Email: contact@wawtelecom.com</p>
+                           
+                        </div>
+                
+                        <!-- Formulaire de contact -->
+                        <div class="contact-form">
+                            <form action="/submit-form" method="POST">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" name="name" required>
+                
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                                <button type="submit">Envoyer</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                
 
 
 
@@ -181,7 +870,7 @@
                                 </div>
                                 <div id="w-node-_956d022f-1588-c453-227f-5564ee79f020-ee79f019" class="column_footer">
                                     <div class="wrapper_contact-details">
-                                        <p class="text-size-body-xsm is--bold">Address</p>
+                                        <p class="text-size-body-xsm is--bold" style="font-size: 18px;">Address</p>
                                         <p class="text-size-body-sm">
                                             <a href="https://maps.app.goo.gl/eJoPnHSAmTcWyDmu5" target="_blank" class="link_footer"> Ngor Almadies, Immeuble BIB'S<br>60 Route de Ngor – Dakar, Sénégal</a>
                                         </p>
@@ -192,7 +881,7 @@
                                         <p class="text-size-body-sm">
                                             <a href="mailto:ngombourama@gmail.com" class="link_footer">contacte@wawtelecom.com</a>
                                         </p>
-                                        <p class="text-size-body-xsm is--bold">Nos reseaux sociaux</p>
+                                        <p class="text-size-body-xsm is--bold" style="font-size: 18px;">Nos reseaux sociaux</p>
                                         <div class="wrapper_socials">
                                             <a href="https://www.linkedin.com/company/wawtelecom" target="_blank" class="link_socials w-inline-block">
                                                 <div class="svg_social w-embed">
@@ -212,10 +901,10 @@
                                     </div>
                                 </div>
                                 <div id="w-node-_956d022f-1588-c453-227f-5564ee79f02f-ee79f019" class="column_footer">
-                                    <p class="text-size-body-xsm is--bold">Liens rapides</p>
+                                    <p class="text-size-body-xsm is--bold" style="font-size: 18px;">Liens rapides</p>
                                     <a href="#" class="link_footer hide-for-now">Service</a>
                                     <a href="connexion.html" class="link_footer">Connexion</a>
-                                    <a href="couverture.html" class="link_footer">Couverture</a>
+
                                     <a href="apropos.html" class="link_footer">A propos</a>
                                   
                                     <a href="contacte.html" class="link_footer">Contact</a>

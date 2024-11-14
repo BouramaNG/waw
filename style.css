@@ -114,7 +114,29 @@ background-color: #333;
 border-radius: 5px;
 font-size: 15px;
 }
+.link_nav .design{
+  font-size: 20px;
+  font-weight: bolder;
+}
 
+.dropdown-toggle .design{
+  font-size: 20px;
+  font-weight: bolder;
+}
+.dropdown-toggle .design:hover{
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: #333;
+  color: #FFDD33;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.collection_item-services .link_nav{
+  font-size: 15px;
+  font-weight: bolder;
+}
 /* Dropdown Styling */
 .dropdown {
   position: relative;
@@ -989,7 +1011,7 @@ gap: 8px;
 }
 
 .collection_item-services-footer .link_footer {
-font-size: 14px;
+font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -1479,6 +1501,8 @@ transition: color 0.3s;
 
 .link_footer:hover {
 color: #ffffff;
+font-size: 15px;
+font-weight: bolder;
 }
 
 .wrapper_socials {
